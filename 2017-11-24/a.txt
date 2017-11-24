@@ -1,0 +1,8 @@
+// p5工程搭建
+
+>npm install -g p5-manager  // 安装 p5脚手架
+>p5 g -b pro  // 初始化项目
+>npm install http-server -g  // 安装 http-server  http-server [path] [options]
+>cd pro && http-server -p 3000 // 127.0.0.1:3000 访问项目
+//或 安装 atom编辑器 atom-live-server 插件
+// ctrl-alt-3 开启 3000端口保存刷新项目
