@@ -3,7 +3,7 @@ var os = [];
 
 function setup() {
 	createCanvas(600, 400);
-	for(let i=0; i<6; i++){
+	for(let i=0; i< random(5,7); i++){
 		os.push( new Over() )
 	}
 }
