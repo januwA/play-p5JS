@@ -3,23 +3,26 @@ var obj;
 var obj2 = [];
 var i = 0;
 
+var odate = 0;
 function myPush(i){
 	// 用于定时创建
-	obj2.push( new Obj2({x: i}) )
-	setTimeout(()=>{ myPush(i++);}, 500)
+	var od =  Date.now();
+	if(od - odate > 500){
+		obj2.push( new Obj2({x: i}) )
+		odate = od;
+	}
 }
 
 function setup() {
 	createCanvas(600, 400);
 	obj = new Obj();
 
-	myPush(i)
 }
 
 
 function draw() {
 	background(0)
-
+	myPush(i);// 一只调用添加 obj方法
 	fill(255)
 	noStroke()
 
