@@ -6,9 +6,7 @@ function setup() {
 
 function draw() {
 	background(0)
-	ball.show()
-	ball.update()
-	ball.move()
+	ball.run();
 }
 
 
@@ -24,7 +22,11 @@ class Ball {
 		this.g = random(0, 255)
 		this.b = random(0, 255)
 	}
-
+	run(){
+		this.show();
+		this.update();
+		ball.move();
+	}
 	show(){
 		stroke(this.r, this.g, this.b)
 		strokeWeight(3)
