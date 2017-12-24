@@ -4,7 +4,7 @@ function setup() {
 	createCanvas(600, 400);
 
 	for(let i =0; i< 200; i++){
-		balls[i] = new Ball();
+		balls.push( new Ball() )
 	}
 
 }
