@@ -16,9 +16,7 @@ function preload() {
 }
 
 function setup() {
-	console.log(img);
-	
-  createCanvas(600, 400);
+  createCanvas(img.width, img.height);
   img.loadPixels();
 
   for (let x = 0; x < img.width; x++) {
@@ -26,7 +24,7 @@ function setup() {
       // 这里和processing 不同的是要 *4
       let index = (x + y * img.width) * 4;
       let c = img.pixels[index];
-      let b = brightness(c);
+      let b = brightness(color(c));
       if (b > 10) {
         spots.push(createVector(x, y));
       }

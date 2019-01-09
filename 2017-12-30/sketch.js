@@ -1,8 +1,9 @@
 var img;
 var myimage;
+
 function preload(){
 	//需要在 这个钩子 函数里面加载图片
-	img  = loadImage('http://per.kelantu.com/photos/1514298377-FqGNCrYwvU39g3Dk7vfLRZjCfVrm-orij0?e=3153600000&token=CT86R8zZYVXDyHWEWFoMX4pz0ksOzxtKCaC80si4:dBl3h8VhkxczWNeq6-ddM8SGiGo= ')
+	img  = loadImage('https://i.loli.net/2018/09/05/5b8fce8bbe8b5.jpg')
 
 }
 function setup() {
