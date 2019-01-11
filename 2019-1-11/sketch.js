@@ -26,9 +26,10 @@ function draw() {
   fill("red");
   ellipse(x, y, 40);
 
-  for (let ball of balls) {
+  for (let i = 0; i < balls.length; i++) {
+    const ball = balls[i];
     ball.show();
-    ball.update();
+    ball.update(i);
   }
 }
 
@@ -47,8 +48,12 @@ class Ball {
     ellipse(this.x, this.y, 40);
   }
 
-  update() {
-    this.x = lerp(this.x, mouseX, 0.06) + random(-20, 20);
-    this.y = lerp(this.y, mouseY, 0.06) + random(-20, 20);
+  update(i) {
+    let d = map(i, 0, balls.length, 0.005, 0.02);
+    // this.x = lerp(this.x, mouseX, d) + random(-20, 20);
+    // this.y = lerp(this.y, mouseY, d) + random(-20, 20);
+
+    this.x = lerp(this.x, mouseX, d);
+    this.y = lerp(this.y, mouseY, d);
   }
 }
