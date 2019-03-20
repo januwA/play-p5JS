@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>2019-2-13</title>
+
+  <script src="../libraries/p5.js"></script>
+  <script src="../libraries/p5.dom.js"></script>
+  <script src="../libraries/p5.sound.js"></script>
+  <script src="sketch.js"></script>
+
+  <style>
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+    }
+
+    .bg,
+    .bg2 {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+
+    .bg {
+      -webkit-clip-path: polygon(86% 51%, 100% 23%, 100% 40%, 100% 75%, 99% 100%, 60% 100%, 0 100%, 54% 91%, 79% 73%);
+      clip-path: polygon(86% 51%, 100% 23%, 100% 40%, 100% 75%, 99% 100%, 60% 100%, 0 100%, 54% 91%, 79% 73%);
+      z-index: -1;
+      background-color: rgba(245, 63, 130, 0.54);
+    }
+
+    .bg2 {
+      -webkit-clip-path: polygon(86% 54%, 100% 23%, 100% 40%, 100% 75%, 99% 100%, 60% 100%, 0 100%, 51% 83%, 74% 67%);
+      clip-path: polygon(86% 54%, 100% 23%, 100% 40%, 100% 75%, 99% 100%, 60% 100%, 0 100%, 51% 83%, 74% 67%);
+
+      z-index: -2;
+      background-color: rgba(255, 68, 137, 0.671);
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 50% auto;
+      height: auto;
+      align-self: center;
+      margin: 0 50px;
+    }
+
+    ul {
+      list-style-type: none;
+      perspective: 1000px;
+      /* 视距-用来设置用户与元素3d空间Z平面之间的距离。*/
+    }
+
+    ul li {
+      display: grid;
+      grid-template-columns: 20% auto;
+      border-radius: 10px;
+      padding: 15px;
+      cursor: pointer;
+      transform: rotateY(-30deg) rotateX(15deg);
+      position: absolute;
+      border-bottom: 4px solid rgba(0, 0, 0, .2);
+      mix-blend-mode: multiply;
+      /* 让该元素内容与元素背景下面的元素发生混合 */
+      transition: transform .3s ease-out 20ms;
+    }
+
+    ul li img {
+      max-width: auto;
+    }
+
+    ul li:nth-child(1) {
+      background-color: rgba(247, 40, 40, 0.911);
+      top: -105px;
+      z-index: 2;
+      border-bottom-color: rgba(240, 0, 0, 0.9);
+    }
+
+    ul li:nth-child(2) {
+      background-color: rgba(57, 202, 57, 0.911);
+      z-index: 1;
+      border-bottom-color: rgba(0, 255, 0, 0.795);
+    }
+
+    ul li:nth-child(3) {
+      background-color: rgba(47, 47, 224, 0.904);
+      top: 105px;
+      border-bottom-color: rgba(0, 0, 247, 0.747);
+    }
+
+    ul li:hover {
+      transform: rotateY(-22deg) rotateX(7deg) scale(1.02);
+      z-index: 3;
+      mix-blend-mode: normal;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-top: 0;
+    }
+
+    h1~p {
+      color: rgb(92, 89, 89);
+      line-height: 1.5em;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bg"></div>
+  <div class="bg2"></div>
+
+  <div class="container">
+    <div id="left">
+      <h1>ajanuw</h1>
+      <p>Mozilla/5.0 (Macintosh; Intel Mac OS X 10.5.6; rv:13.1) Gecko/20100101 Firefox/13.1.1</p>
+    </div>
+    <div id="right">
+      <ul>
+        <li><img src="https://i.loli.net/2018/09/05/5b8fce5fe2baa.gif" alt="" />
+          <span>
+            <strong>AppCoind</strong>
+            <p>http://lorempixel.com/640/480/people</p>
+          </span>
+        </li>
+        <li><img src="https://i.loli.net/2018/09/05/5b8fce5fe2baa.gif" alt="" />
+          <span>
+            <strong>AppCoind</strong>
+            <p>http://lorempixel.com/640/480/technics</p>
+          </span>
+        </li>
+        <li><img src="https://i.loli.net/2018/09/05/5b8fce5fe2baa.gif" alt="" />
+          <span>
+            <strong>AppCoind</strong>
+            <p>http://lorempixel.com/640/480/nightlife</p>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+</html>
