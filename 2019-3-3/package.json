@@ -1,0 +1,17 @@
+{
+  "name": "2019-3-3",
+  "version": "1.0.0",
+  "description": "使用p5.js，node和Web Socket创建共享协作绘图画布",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "socket.io": "^2.2.0"
+  }
+}
